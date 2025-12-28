@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soundtrack – Album</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/player.css">
+</head>
+<body>
+
+<div id="album-container">
+  <h2 id="albumTitle"></h2>
+  <div id="song-list"></div>
+
+  <div class="equalizer">
+    <label>Bass</label><input type="range" min="-12" max="12" value="0" oninput="setEQ(0,this.value)">
+    <label>Low</label><input type="range" min="-12" max="12" value="0" oninput="setEQ(1,this.value)">
+    <label>Mid</label><input type="range" min="-12" max="12" value="0" oninput="setEQ(2,this.value)">
+    <label>High</label><input type="range" min="-12" max="12" value="0" oninput="setEQ(3,this.value)">
+    <label>Treble</label><input type="range" min="-12" max="12" value="0" oninput="setEQ(4,this.value)">
+    <button onclick="resetEQ()">Reset EQ</button>
+  </div>
+
+  <canvas id="waveform" width="300" height="60"></canvas>
+
+  <div id="audio-player" class="player">
+    <button onclick="prevSong()">⏮</button>
+    <button onclick="togglePlay()">▶️ / ⏸</button>
+    <button onclick="stopSong()">⏹</button>
+    <button onclick="nextSong()">⏭</button>
+    <span id="now-playing">Not Playing</span>
+  </div>
+  <audio id="audio" preload="metadata"></audio>
+</div>
+
+<script src="/assets/js/firebase.js"></script>
+<script src="/assets/js/player.js"></script>
+<script src="/assets/js/album.js"></script>
+</body>
+</html>

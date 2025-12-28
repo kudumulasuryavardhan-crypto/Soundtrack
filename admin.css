@@ -1,0 +1,20 @@
+.admin-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  font-family: 'Roboto';
+}
+
+.admin-container h2 {
+  text-align: center;
+}
+
+.admin-container input, select, button {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}

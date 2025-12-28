@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+  .auth-container, .admin-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .equalizer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .equalizer input[type=range] {
+    width: 50px;
+  }
+}

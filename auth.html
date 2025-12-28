@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundtrack – Login / Signup</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="auth-container">
+  <h2>Soundtrack</h2>
+  
+  <div id="signup-form">
+    <h3>Sign Up</h3>
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="tel" id="phone" placeholder="Mobile Number">
+    <input type="date" id="dob" placeholder="Date of Birth">
+    <select id="gender">
+      <option value="">Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+  </div>
+
+  <div id="login-form">
+    <h3>Login</h3>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="otp-section" style="display:none;">
+    <h3>Enter OTP</h3>
+    <input type="text" id="otpCode" placeholder="Enter OTP">
+    <button onclick="verifyOTP()">Verify OTP</button>
+  </div>
+</div>
+
+<script src="/assets/js/firebase.js"></script>
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/footer.js"></script>
+</body>
+</html>
